@@ -1,0 +1,17 @@
+.next
+node_modules
+.vscode
+.env
+.env.local
+.env.production.local
+coverage
+dist
+npm-debug.log*
+.vercel
+*.tsbuildinfo
+output/
+.playwright-cli/
+.playwright-profile/
+output-*.log
+
+.vercel

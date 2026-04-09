@@ -1,0 +1,41 @@
+{
+  "name": "retailcrm-orders-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "node scripts/run-next-build.mjs",
+    "start": "next start",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "import:mock-orders": "node --max-old-space-size=4096 ./node_modules/tsx/dist/cli.mjs scripts/import-mock-orders.ts",
+    "sync:retailcrm": "node --max-old-space-size=4096 ./node_modules/tsx/dist/cli.mjs scripts/sync-retailcrm-to-supabase.ts",
+    "notify:high-value": "node --max-old-space-size=4096 ./node_modules/tsx/dist/cli.mjs scripts/check-high-value-orders.ts",
+    "sync:all": "node --max-old-space-size=4096 ./node_modules/tsx/dist/cli.mjs scripts/run-full-sync.ts",
+    "github:configure-secrets": "node --max-old-space-size=4096 ./node_modules/tsx/dist/cli.mjs scripts/configure-github-secrets.ts"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.2.7",
+    "@fontsource/manrope": "^5.2.8",
+    "@supabase/supabase-js": "^2.52.1",
+    "date-fns": "^4.1.0",
+    "next": "^15.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "^2.15.4",
+    "tweetsodium": "^0.0.4",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^24.0.10",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "jsdom": "^26.0.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
+  }
+}
